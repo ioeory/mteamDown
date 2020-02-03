@@ -31,16 +31,18 @@ switch(window.location.host) {
     case 'pt.keepfrds.com':
         jQuery('img.download').each((idx, img) => {
             let link = jQuery(img).parent('a').prop('href');
-            download(link)
+            setTimeout(() => {
+                download(link)
+            }, 1100 * idx);
         });
         break;
 
     case 'hdsky.me':
         jQuery('input.download').each((idx, input) => {
             let link = jQuery(input).parent('form').prop('action');
-           setTimeout(() => {
+            setTimeout(() => {
                 download(link)
-            }, 500 * idx);
+            }, 1100 * idx);
         });
         break;
         default:
