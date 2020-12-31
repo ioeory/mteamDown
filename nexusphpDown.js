@@ -1,4 +1,4 @@
-const pkey = '';
+const passkey = '';
 const getTorrentName = (link) => {
     let begin = link.indexOf('id=') + 3;
     let end = link.length - 1;
@@ -28,6 +28,7 @@ switch(window.location.host) {
     case 'discfan.net':
     case 'pt.m-team.cc':
     case 'ourbits.club':
+    case 'open.cd':
     case 'pt.keepfrds.com':
         jQuery('img.download').each((idx, img) => {
             let link = jQuery(img).parent('a').prop('href');
