@@ -9,7 +9,7 @@ const getTorrentName = (link) => {
 };
 const download = (link) => {
     let filename = getTorrentName(link);
-    link += '&passkey=' + pkey;
+    link += '&passkey=' + passkey;
     console.log(link);
     fetch(link).then(res => res.blob().then(blob => {
         let a = document.createElement('a');
